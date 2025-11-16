@@ -143,7 +143,7 @@ const Auth = () => {
         </CardContent>
         <CardFooter className="flex justify-center">
           <p className="text-xs text-muted-foreground">
-            Secure authentication powered by Lovable Cloud
+            
           </p>
         </CardFooter>
       </Card>

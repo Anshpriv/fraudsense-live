@@ -19,7 +19,7 @@ A complete fraud detection web application with ML model training, real-time pro
 - **State Management**: React hooks
 - **Real-time**: WebSocket support ready
 - **CSV Parsing**: PapaParse for client-side analysis
-- **Backend**: Lovable Cloud (Supabase) for auth, database, and storage
+- **Backend**:  (Supabase) for auth, database, and storage
 
 ### Backend (To Be Implemented - Python FastAPI)
 
@@ -220,14 +220,12 @@ manager = ConnectionManager()
 Create `.env` in backend/:
 
 ```env
-# Supabase (from Lovable Cloud)
+# Supabase 
 SUPABASE_URL=your_supabase_url
 SUPABASE_KEY=your_supabase_anon_key
 SUPABASE_JWT_SECRET=your_jwt_secret
 
-# Optional: if using Lovable AI for model training
-LOVABLE_API_KEY=your_lovable_api_key
-```
+
 
 ### Requirements.txt
 
@@ -257,8 +255,6 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ## 🗄️ Database Schema (Already Created)
 
-The Lovable Cloud backend already has these tables:
-
 - **profiles**: User profiles
 - **uploads**: CSV upload tracking with interim_metrics (JSONB)
 - **models**: Trained ML models with metrics
@@ -276,7 +272,7 @@ Expected CSV columns:
 
 ## 🔐 Authentication Flow
 
-1. Frontend uses Lovable Cloud (Supabase) auth
+1. Frontend uses Supabase auth
 2. User gets JWT token after login
 3. Send JWT in WebSocket query string: `/ws?token=<jwt>`
 4. Backend verifies JWT using SUPABASE_JWT_SECRET
@@ -342,13 +338,6 @@ npm run build
 - [ ] Model versioning system
 - [ ] Error handling and recovery
 
-## 📚 Resources
-
-- [FastAPI WebSockets](https://fastapi.tiangolo.com/advanced/websockets/)
-- [Scikit-learn](https://scikit-learn.org/)
-- [Supabase Python](https://github.com/supabase-community/supabase-py)
-- [Lovable Cloud Docs](https://docs.lovable.dev/features/cloud)
-
 ---
 
-**Built with ❤️ for hackathons**
+
