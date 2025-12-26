@@ -1,6 +1,7 @@
 # Node / JS project
 node_modules/
 dist/
+bun.lockb
 
 # Vite / build caches
 .vite/
